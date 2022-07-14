@@ -57,10 +57,16 @@ assignment.countEvenNumbers = countEvenNumbers;
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
-    let output=0;
+    let output=[];
+    let result=0;
     let fahrenheit=0;
-    fahrenheit=(celsius*9/5)+32;
-    output=Math.trunc(fahrenheit);
+    for(let i=0; i<arrayOfNumbers.length; i++){
+        celsius=arrayOfNumbers[i];
+        fahrenheit=(celsius*9/5)+32;
+        result=Math.trunc(fahrenheit);
+        output.push(result);
+    }
+    
     return output;
 }
 assignment.celsiusToFahrenheit = celsiusToFahrenheit;
